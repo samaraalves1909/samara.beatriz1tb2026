@@ -1,148 +1,214 @@
-/* style.css - Paleta Bordô, Bege e Branco (Versão Simples) */
+/* style.css - Paleta Premium: Bordô, Bege e Branco */
 
+/* Variáveis de Cores Quentes e Sofisticadas */
+:root {
+    --bordo-escuro: #4a0e17;      /* Cor principal para cabeçalhos e destaques fortes */
+    --bordo-medio: #6b1d2f;       /* Usado em hover e elementos secundários */
+    --bordo-suave: #faeef0;       /* Fundo sutil para blocos de destaque */
+    --bege-claro: #fcf9f2;         /* Fundo principal do site (tom quente e confortável) */
+    --bege-card: #f4eee1;          /* Fundo dos artigos para dar contraste */
+    --branco-puro: #ffffff;        /* Detalhes e fundos internos */
+    --texto-escuro: #2b1a1d;       /* Cor da fonte principal (marrom bem escuro/quase preto) */
+    --texto-suave: #5e4c4f;        /* Cor para legendas e textos secundários */
+    --borda-suave: #e3dac9;        /* Divisórias elegantes */
+}
+
+/* Configuração Geral do Corpo */
 body {
-    background-color: #fcf9f2; /* Fundo geral em bege claro */
-    color: #2b1a1d;            /* Texto em marrom bem escuro */
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: var(--bege-claro);
+    color: var(--texto-escuro);
+    font-family: 'Georgia', 'Times New Roman', serif; /* Fonte elegante que combina com clássicos */
+    line-height: 1.7;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho do Blog */
-header {
-    background-color: #4a0e17; /* Bordô principal */
-    color: #ffffff;            /* Texto branco */
+/* Cabeçalho Principal (Header) */
+header#inicio {
+    background-color: var(--bordo-escuro);
+    color: var(--branco-puro);
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--bege-card);
 }
 
-header h1 {
+header#inicio h1 {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+header#inicio p {
+    font-size: 1.1rem;
+    color: var(--bege-card);
     margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 5px 0 0 0;
     font-style: italic;
-    color: #f4eee1;
 }
 
 /* Menu de Navegação */
 nav {
-    background-color: #ffffff; /* Fundo do menu branco */
-    border-bottom: 2px solid #e3dac9;
-    padding: 10px 0;
+    background-color: var(--branco-puro);
+    border-bottom: 1px solid var(--borda-suave);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav table {
-    margin: 0 auto; /* Centraliza a tabela do menu */
+    margin: 0 auto;
 }
 
 nav a {
-    color: #4a0e17; /* Links em bordô */
+    color: var(--bordo-escuro);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o mouse nos links */
 nav a:hover {
-    background-color: #4a0e17;
-    color: #ffffff;
+    color: var(--branco-puro);
+    background-color: var(--bordo-medio);
     border-radius: 4px;
 }
 
-/* Espaçamento do Conteúdo */
+/* Container de Conteúdo */
 main {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 850px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Blocos de Artigos (Cards) */
+/* Estilização dos Artigos (Cards) */
 section {
-    background-color: #f4eee1; /* Fundo do card em bege mais escuro */
-    border: 1px solid #e3dac9;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 30px;
+    background-color: var(--bege-card);
+    border: 1px solid var(--borda-suave);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(74, 14, 23, 0.05); /* Sombra sutil com tom bordô */
+}
+
+section header span {
+    font-size: 0.8rem;
+    color: var(--bordo-medio);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
 }
 
 section h2 {
-    color: #4a0e17; /* Títulos internos em bordô */
+    color: var(--bordo-escuro);
+    font-size: 2rem;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
-/* Ajustes de Texto */
+/* Parágrafos e Destaques */
 p {
+    margin-bottom: 20px;
     text-align: justify;
 }
 
 mark {
-    background-color: #4a0e17;
-    color: #ffffff;
-    padding: 2px 4px;
+    background-color: var(--bordo-escuro);
+    color: var(--branco-puro);
+    padding: 2px 6px;
+    border-radius: 3px;
 }
 
-blockquote {
-    border-left: 4px solid #6b1d2f;
-    margin: 15px 0;
-    padding-left: 15px;
-    font-style: italic;
-    color: #5e4c4f;
-}
-
-/* Caixas Interativas (Details e Summary) */
+/* Caixa de Segredos Interativa (Details / Summary) */
 details {
-    background-color: #ffffff; /* Abre uma caixinha branca para destacar */
-    border: 1px solid #e3dac9;
-    padding: 10px;
-    border-radius: 4px;
-    margin: 15px 0;
+    background-color: var(--branco-puro);
+    border: 1px solid var(--borda-suave);
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    border-left: 4px solid var(--bordo-escuro);
 }
 
 summary {
-    color: #4a0e17;
+    color: var(--bordo-escuro);
     cursor: pointer;
     font-weight: bold;
+    outline: none;
 }
 
-/* Imagens Responsivas */
+summary:hover {
+    color: var(--bordo-medio);
+}
+
+/* Imagens e Legendas */
+figure {
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
-    display: block;
-    margin-top: 15px;
+    border-radius: 8px;
+    border: 4px solid var(--branco-puro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Caixa Sobre (Fieldset) */
+figcaption {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Bloco de Citação */
+blockquote {
+    border-left: 4px solid var(--bordo-medio);
+    margin: 20px 0;
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--texto-suave);
+}
+
+/* Seção Sobre Especial (Fieldset / Legend) */
 fieldset {
-    border: 2px solid #4a0e17;
-    border-radius: 8px;
-    background-color: #ffffff;
-    padding: 20px;
+    border: 2px dashed var(--bordo-medio);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--branco-puro);
 }
 
 legend h3 {
-    background-color: #4a0e17;
-    color: #ffffff;
-    padding: 5px 15px;
+    color: var(--branco-puro);
+    background-color: var(--bordo-escuro);
+    padding: 6px 15px;
+    border-radius: 20px;
     margin: 0;
-    border-radius: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-top: 1px solid #e3dac9;
-    color: #5e4c4f;
+    padding: 40px 20px;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--borda-suave);
+    background-color: var(--branco-puro);
 }
 
-/* Deixa as linhas brutas <hr> invisíveis para não quebrar o visual */
+/* Linhas Divisórias (Substituídas por espaçamentos elegantes) */
 hr {
-    display: none;
+    display: none; /* Esconde as linhas brutas para dar espaço à estrutura limpa */
 }
