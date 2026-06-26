@@ -1,0 +1,148 @@
+/* style.css - Paleta Bordô, Bege e Branco (Versão Simples) */
+
+body {
+    background-color: #fcf9f2; /* Fundo geral em bege claro */
+    color: #2b1a1d;            /* Texto em marrom bem escuro */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho do Blog */
+header {
+    background-color: #4a0e17; /* Bordô principal */
+    color: #ffffff;            /* Texto branco */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #f4eee1;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #ffffff; /* Fundo do menu branco */
+    border-bottom: 2px solid #e3dac9;
+    padding: 10px 0;
+}
+
+nav table {
+    margin: 0 auto; /* Centraliza a tabela do menu */
+}
+
+nav a {
+    color: #4a0e17; /* Links em bordô */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Efeito ao passar o mouse nos links */
+nav a:hover {
+    background-color: #4a0e17;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+/* Espaçamento do Conteúdo */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Blocos de Artigos (Cards) */
+section {
+    background-color: #f4eee1; /* Fundo do card em bege mais escuro */
+    border: 1px solid #e3dac9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #4a0e17; /* Títulos internos em bordô */
+    margin-top: 0;
+}
+
+/* Ajustes de Texto */
+p {
+    text-align: justify;
+}
+
+mark {
+    background-color: #4a0e17;
+    color: #ffffff;
+    padding: 2px 4px;
+}
+
+blockquote {
+    border-left: 4px solid #6b1d2f;
+    margin: 15px 0;
+    padding-left: 15px;
+    font-style: italic;
+    color: #5e4c4f;
+}
+
+/* Caixas Interativas (Details e Summary) */
+details {
+    background-color: #ffffff; /* Abre uma caixinha branca para destacar */
+    border: 1px solid #e3dac9;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+summary {
+    color: #4a0e17;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Imagens Responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Caixa Sobre (Fieldset) */
+fieldset {
+    border: 2px solid #4a0e17;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+legend h3 {
+    background-color: #4a0e17;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0;
+    border-radius: 15px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e3dac9;
+    color: #5e4c4f;
+}
+
+/* Deixa as linhas brutas <hr> invisíveis para não quebrar o visual */
+hr {
+    display: none;
+}
